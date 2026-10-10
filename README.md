@@ -225,3 +225,8 @@ portátil ainda estão em evolução.
 
 Contribuições, sugestões de novos diagramas e discussões sobre fontes
 científicas serão bem-vindas quando o repositório público for disponibilizado.
+
+## Licença
+   Copyright (C) 2026 Eduardo Aguiar de Mello
+   Este programa é software livre, licenciado sob a GNU Affero General Public
+   License v3.0 (AGPL-3.0). Veja o arquivo LICENSE.
