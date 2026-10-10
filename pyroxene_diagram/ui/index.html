@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Plotador Ternário — v0.3.5-alpha</title>
+  <script src="vendor/plotly.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Plotador Ternário</h1><span>v0.3.5-alpha</span></header>
+  <main>
+    <section class="chart-panel"><div id="chart"></div></section>
+    <aside>
+      <label class="template-picker" for="template">Template do Diagrama
+        <select id="template"></select>
+      </label>
+      <div class="actions"><button id="load-csv">Importar CSV / Excel</button><button id="add-point">Adicionar ponto</button><button id="remove-selected" hidden>Remover selecionados (0)</button></div>
+      <div class="history-actions"><button id="undo" disabled>↶ Desfazer</button><button id="redo" disabled>↷ Refazer</button></div>
+      <p id="status" role="status"></p>
+      <table><thead><tr><th class="selection-column"><input id="select-all" type="checkbox" aria-label="selecionar todos os pontos"></th><th>Nome/código</th><th data-axis="0">A</th><th data-axis="1">B</th><th data-axis="2">C</th><th aria-label="Ações"></th></tr></thead><tbody id="points"></tbody></table>
+      <div class="exports"><button data-format="png">PNG</button><button data-format="svg">SVG</button><button data-format="tiff">TIFF</button></div>
+      <div class="table-exports"><button data-table-format="csv">Exportar CSV</button><button data-table-format="xlsx">Exportar Excel (.xlsx)</button></div>
+    </aside>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "source": "Morimoto et al. (1988), Nomenclature of Pyroxenes, Mineralogy and Petrology 39, 55-76",
+  "normalization": "Wo + En + Fs = 100",
+  "fields": [
+    {
+      "name": "Clinoenstatita",
+      "color": "#4C78A8",
+      "label": {"wo": 2, "en": 66, "fs": 32},
+      "polygon": [{"wo": 0, "en": 100, "fs": 0}, {"wo": 5, "en": 95, "fs": 0}, {"wo": 5, "en": 47.5, "fs": 47.5}, {"wo": 0, "en": 50, "fs": 50}]
+    },
+    {
+      "name": "Clinoferrossilita",
+      "color": "#F58518",
+      "label": {"wo": 2, "en": 32, "fs": 66},
+      "polygon": [{"wo": 0, "en": 50, "fs": 50}, {"wo": 5, "en": 47.5, "fs": 47.5}, {"wo": 5, "en": 0, "fs": 95}, {"wo": 0, "en": 0, "fs": 100}]
+    },
+    {
+      "name": "Pigeonita",
+      "color": "#54A24B",
+      "label": {"wo": 12, "en": 52, "fs": 36},
+      "polygon": [{"wo": 5, "en": 95, "fs": 0}, {"wo": 20, "en": 80, "fs": 0}, {"wo": 20, "en": 0, "fs": 80}, {"wo": 5, "en": 0, "fs": 95}]
+    },
+    {
+      "name": "Augita",
+      "color": "#B279A2",
+      "label": {"wo": 31, "en": 39, "fs": 30},
+      "polygon": [{"wo": 20, "en": 80, "fs": 0}, {"wo": 45, "en": 55, "fs": 0}, {"wo": 45, "en": 0, "fs": 55}, {"wo": 20, "en": 0, "fs": 80}]
+    },
+    {
+      "name": "Diopsídio",
+      "color": "#E45756",
+      "label": {"wo": 47, "en": 35, "fs": 18},
+      "polygon": [{"wo": 45, "en": 55, "fs": 0}, {"wo": 50, "en": 50, "fs": 0}, {"wo": 50, "en": 25, "fs": 25}, {"wo": 45, "en": 27.5, "fs": 27.5}]
+    },
+    {
+      "name": "Hedenbergita",
+      "color": "#72B7B2",
+      "label": {"wo": 47, "en": 18, "fs": 35},
+      "polygon": [{"wo": 45, "en": 27.5, "fs": 27.5}, {"wo": 50, "en": 25, "fs": 25}, {"wo": 50, "en": 0, "fs": 50}, {"wo": 45, "en": 0, "fs": 55}]
+    }
+  ]
+}

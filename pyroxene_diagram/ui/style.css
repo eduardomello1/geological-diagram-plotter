@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px Arial, sans-serif; color: #25313c; background: #f4f6f8; }
+header { padding: 14px 24px; background: #1f3a52; color: white; display: flex; align-items: baseline; gap: 16px; }
+h1 { font-size: 21px; margin: 0; } header span { opacity: .8; }
+main { display: grid; grid-template-columns: minmax(600px, 1fr) 430px; gap: 12px; height: calc(100vh - 65px); padding: 12px; }
+.chart-panel, aside { background: white; border-radius: 5px; box-shadow: 0 1px 4px #0001; }
+#chart { height: 100%; min-height: 580px; }
+aside { padding: 16px; overflow: auto; }
+button { border: 0; border-radius: 3px; background: #1f6fae; color: white; padding: 8px 11px; cursor: pointer; }
+button:hover { background: #17577f; } .actions, .exports { display: flex; gap: 8px; margin-bottom: 14px; }
+.history-actions, .table-exports { display: flex; gap: 8px; margin-bottom: 14px; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.template-picker { display: block; margin-bottom: 14px; font-weight: 600; }
+select { display: block; width: 100%; margin-top: 6px; padding: 7px; border: 1px solid #c6d0d8; border-radius: 2px; background: white; }
+.file-label { display: block; margin: 10px 0 16px; color: #596773; } .file-label button { margin-left: 8px; }
+#status { min-height: 20px; color: #a23b25; }
+table { border-collapse: collapse; width: 100%; } th, td { border-bottom: 1px solid #dce2e7; padding: 7px 4px; text-align: left; }
+th { background: #eef2f5; font-weight: 600; } input { width: 100%; padding: 5px; border: 1px solid #c6d0d8; border-radius: 2px; }
+.selection-column { width: 30px; text-align: center; }
+.selection-column input { width: auto; margin: 0; }
+tr.active { background: #fff1c7; } tr.selected { background: #cfe8ff; outline: 1px solid #4a90c2; }
+.exports { border-top: 1px solid #dce2e7; padding-top: 14px; margin-top: 20px; }
+.remove-point { background: transparent; color: transparent; padding: 3px 7px; font-weight: bold; }
+tr:hover .remove-point, .remove-point:focus { color: #b42318; }
+#remove-selected { background: #a23b25; }

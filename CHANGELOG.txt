@@ -1,0 +1,96 @@
+Changelog
+
+v0.3.5-alpha - 2026-10-01
+
+Corrigido:
+- Removidas propriedades inválidas de opacidade dentro de `textfont` nos
+  traces dos nomes dos campos.
+- Neutralização da seleção na exportação agora remove `selectedpoints`,
+  `selected` e `unselected` de todos os traces do clone, sem alterar a tela.
+- Adicionado teste automatizado de fumaça para exportação PNG, SVG e TIFF.
+
+v0.3.4-alpha - 2026-10-01
+
+Corrigido:
+- Identificação explícita do traço de amostras, sem depender da posição dos
+  traces para seleção ou atualização visual.
+- Estado sem seleção agora mantém os pontos opacos e em estilo cheio.
+- Nomes dos campos permanecem neutros e pretos durante box/lasso select.
+- Exportação clona e neutraliza o gráfico, preservando zoom/pan sem alterar a
+  seleção visível na interface.
+
+v0.3.3-alpha (Hotfix 3) - 2026-10-01
+
+Corrigido:
+- Substituído o encerramento do processo por `taskkill /F /T /PID`, encerrando
+  a árvore Python e os processos filhos do WebView2 sem exibir janela de CMD.
+- Ativado `private_mode=True` no `webview.start` para usar uma sessão efêmera
+  e reduzir locks persistentes da pasta de dados do WebView2.
+- Corrigida a sincronização da flag de alterações não exportadas ao adicionar
+  pontos manualmente.
+
+v0.3.2-alpha (Hotfix) - 2026-10-01
+
+Corrigido:
+- Removido o fluxo de destruição da janela pela ponte RPC.
+- O fechamento com alterações agora é cancelado imediatamente, e o `confirm`
+  é avaliado em thread daemon separada.
+- Após confirmação, o processo é encerrado diretamente com `os._exit(0)` para
+  evitar teardown do WinForms/WebView2 e processos zumbis.
+
+v0.3.1-alpha (Hotfix) - 2026-10-01
+
+Corrigido:
+- Substituído o diálogo nativo no ciclo de encerramento por confirmação
+  JavaScript thread-safe.
+- Corrigidos travamentos do WebView2, recursão de objetos COM e processos
+  zumbis ao fechar com alterações não exportadas.
+
+v0.3.0-alpha - 2026-09-29
+
+Adicionado:
+- Histórico de snapshots com Desfazer/Refazer por botões e atalhos Ctrl+Z,
+  Ctrl+Y e Ctrl+Shift+Z.
+- Exportação da tabela editada em CSV e XLSX, compatível com a reimportação.
+- Aviso ao fechar a aplicação com alterações da tabela ainda não exportadas.
+
+Corrigido:
+- Exclusões individuais e em massa agora são imediatas e reversíveis, sem
+  confirmação destrutiva.
+- Edições de células são registradas como uma ação completa, em vez de uma
+  ação por caractere.
+
+v0.2.2-alpha - 2026-09-29
+
+Adicionado:
+- Coluna de checkboxes para seleção individual e checkbox mestre para
+  selecionar ou desmarcar todos os pontos.
+- Sincronização visual dos checkboxes entre tabela, gráfico e botão de remoção
+  em massa.
+
+Corrigido:
+- Contagem do botão "Remover selecionados (N)", agora baseada exclusivamente
+  em índices únicos e válidos da seleção de amostras.
+- Eventos de seleção do Plotly que podiam incluir traces sem pontos de amostras.
+- Mantida a confirmação antes da remoção individual ou em massa.
+
+v0.2.1-alpha - 2026-09-25
+- Corrigida a inicialização da ponte pywebview, aguardando métodos reais da API.
+- Corrigidos dropdown de templates, importação CSV/Excel e exportação.
+- Tooltips agora usam os eixos do template ativo e os rótulos inferiores têm
+  margem adicional.
+- Adicionada seleção sincronizada entre gráfico e tabela, exclusão em massa e
+  confirmação antes de remover pontos.
+
+v0.2.0-alpha - 2026-09-25
+- Transformada a base em um Plotador Ternário Genérico com templates.
+- Adicionados os templates Ternário Geral e Piroxênios — Morimoto (1988).
+- Corrigidos rótulos dos eixos, estilo de exportação, centróides dos campos e legenda.
+- Adicionados remoção de pontos e importação CSV/XLS/XLSX.
+- Ajustada a modebar para navegação offline sem download duplicado.
+- Corrigida a inicialização no pywebview quando o evento de prontidão ocorre
+  antes do carregamento do script da interface.
+
+v0.1.0-alpha
+- MVP do diagrama ternário de piroxênios de Morimoto (1988).
+- Importação CSV, adição de pontos e exportação PNG/SVG/TIFF.

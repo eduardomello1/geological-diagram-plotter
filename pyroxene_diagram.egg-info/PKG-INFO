@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: pyroxene-diagram
+Version: 0.1.0
+Summary: Morimoto (1988) pyroxene ternary diagram
+Requires-Python: >=3.10
+Requires-Dist: plotly>=5.20
+Requires-Dist: pywebview>=5.0
+Requires-Dist: Pillow>=10.0
+Requires-Dist: kaleido>=1.0
+Requires-Dist: pandas>=2.0
+Requires-Dist: openpyxl>=3.1
+Requires-Dist: xlrd>=2.0

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyroxene-diagram"
+version = "0.3.5a0"
+description = "Morimoto (1988) pyroxene ternary diagram"
+requires-python = ">=3.10"
+dependencies = [
+  "plotly>=5.20",
+  "pywebview>=5.0",
+  "Pillow>=10.0",
+  "kaleido>=1.0",
+  "pandas>=2.0",
+  "openpyxl>=3.1",
+  "xlrd>=2.0",
+]
+
+[project.scripts]
+pyroxene-diagram = "pyroxene_diagram.app:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
